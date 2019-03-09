@@ -1,7 +1,5 @@
 cluster.name: "god-of-elastic"
-#network.host: 0.0.0.0
+network.host: 0.0.0.0
 discovery.zen.ping.unicast.hosts: ["192.168.0.12", "192.168.0.14"]
-#path.data: /var/lib/elasticsearch
-#path.logs: /var/log/elasticsearch
 node.name:    ${HOSTNAME}
-network.publish_host: 192.168.0.14
+network.publish_host: 192.168.0.14 #type in this line ip of this node
