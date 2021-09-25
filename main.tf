@@ -8,22 +8,13 @@ terraform {
 }
 
 resource "virtualbox_vm" "node" {
-  count  = 1
+  count  = 4
   name   = format("node-%02d", count.index + 1)
-  image  = "./CentOS-7-x86_64-DVD-2009.iso"
-  cpus   = 2
+  image = "./CentOS-7-x86_64-Vagrant-2004_01.VirtualBox.box"
+  cpus   = 1
   memory = "2048 mib"
-  // user_data = "${file("user_data")}"
-
 
   network_adapter {
-    type           = "bridged"
-    host_interface = "en0"
+    type           = "nat"
   }
-
-
-}
-
-provider "virtualbox" {
-  # Configuration options
 }
