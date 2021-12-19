@@ -1,0 +1,16 @@
+docker
+git
+bash-completion
+tmux
+
+sudo iptables -I INPUT -p tcp --dport 5000 -m state --state NEW -j ACCEPT
+
+#add user to docker-group: groupadd docker; usermod -aG docker norwegian;
+
+#download tmux-config https://raw.githubusercontent.com/norwegianblackmetal/tools/master/tmux.conf
+
+#git config --global user.email "finojenok.m@gmail.com"
+#git config --global user.name "norwegianblackmetal"
+
+file #определение типа файла
+ldd #зависимости исполняемого файла

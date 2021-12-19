@@ -10,11 +10,9 @@ terraform {
 resource "virtualbox_vm" "node" {
   count  = 1
   name   = format("node-%02d", count.index + 1)
-  image  = "./CentOS-7-x86_64-DVD-2009.iso"
+  image  = "./CentOS 7.9-2009 (64bit).vdi"
   cpus   = 2
   memory = "2048 mib"
-  // user_data = "${file("user_data")}"
-
 
   network_adapter {
     type           = "bridged"
