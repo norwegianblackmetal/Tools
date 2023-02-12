@@ -14,3 +14,9 @@ sudo iptables -I INPUT -p tcp --dport 5000 -m state --state NEW -j ACCEPT
 
 file #определение типа файла
 ldd #зависимости исполняемого файла
+
+ssh-keygen -l -f id_rsa # Показать хэш ключа
+
+
+# LIBVIRT
+virt-customize -a rhel7.5.beta1.qcow2 --root-password password:PASSWORD
